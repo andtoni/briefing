@@ -1,0 +1,115 @@
+{
+ "_note": "Synthetic test data. Every publication, person, company, country and figure here is invented.",
+ "entries": [
+  {
+   "id": 1,
+   "feed_id": 1,
+   "title": "Daily Briefing: Harbour talks resume, a quiet election, rain at last",
+   "author": "The Example Gazette",
+   "content": "<h2>Harbour talks resume</h2><p>Negotiators from two invented countries, Arland and Brevia, returned to the table over fishing rights in a shared harbour. Both sides called the first session constructive.</p><p>Observers expect a framework by the end of the month; neither government has published a draft.</p><h2>A quiet election in Corvia</h2><p>Turnout in the fictional republic of Corvia was the lowest on record, at 41 per cent. The incumbent coalition kept its majority by three seats.</p><h2>Rain at last</h2><p>After a dry winter, the made-up city of Dunmore recorded its first heavy rain in four months, easing water restrictions.</p>",
+   "url": "https://example.com/the-example-gazette/1",
+   "hours_ago": 5,
+   "_source": "The Example Gazette",
+   "_section": "World"
+  },
+  {
+   "id": 2,
+   "feed_id": 2,
+   "title": "Sample Markets Daily: bonds rally as inflation cools",
+   "author": "Sample Markets Daily",
+   "content": "<h2>Bonds rally</h2><p>Government bond yields in the fictional Arland fell 12 basis points after inflation came in below forecasts, at 2.1 per cent.</p><p>Equities followed, with the invented AX-50 index up 0.8 per cent by the close.</p><h2>Copper slips</h2><p>Copper futures slipped 1.5 per cent on softer demand from made-up manufacturers.</p><h2>What to watch</h2><p>The central bank of Brevia meets on Thursday; markets price a hold.</p>",
+   "url": "https://example.com/sample-markets-daily/2",
+   "hours_ago": 4,
+   "_source": "Sample Markets Daily",
+   "_section": "Business"
+  },
+  {
+   "id": 3,
+   "feed_id": 3,
+   "title": "Northwind Capital agrees to buy Lumen Tools for $2.4 billion",
+   "author": "Jordan Sample",
+   "content": "<p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 0 of an invented report written for the fixture.</p><p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 1 of an invented report written for the fixture.</p><p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 2 of an invented report written for the fixture.</p><p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 3 of an invented report written for the fixture.</p><p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 4 of an invented report written for the fixture.</p><p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 5 of an invented report written for the fixture.</p><p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 6 of an invented report written for the fixture.</p><p>Northwind Capital, a fictional private equity firm, agreed to acquire Lumen Tools, an invented maker of laboratory software, in a deal valued at $2.4 billion. Sentence 7 of an invented report written for the fixture.</p>",
+   "url": "https://example.com/the-example-ledger/3",
+   "hours_ago": 6,
+   "_source": "The Example Ledger",
+   "_section": "Business"
+  },
+  {
+   "id": 4,
+   "feed_id": 4,
+   "title": "An invented gene therapy clears its first trial",
+   "author": "Riley Example",
+   "content": "<p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 0: all names, numbers and results in this piece are made up.</p><p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 1: all names, numbers and results in this piece are made up.</p><p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 2: all names, numbers and results in this piece are made up.</p><p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 3: all names, numbers and results in this piece are made up.</p><p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 4: all names, numbers and results in this piece are made up.</p><p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 5: all names, numbers and results in this piece are made up.</p><p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 6: all names, numbers and results in this piece are made up.</p><p>Researchers at the imaginary Halden Institute reported that an experimental gene therapy met its primary endpoint in a 60-patient trial. Detail 7: all names, numbers and results in this piece are made up.</p>",
+   "url": "https://example.com/fictional-health-weekly/4",
+   "hours_ago": 7,
+   "_source": "Fictional Health Weekly",
+   "_section": "Biopharma"
+  },
+  {
+   "id": 5,
+   "feed_id": 5,
+   "title": "Hospitals in Brevia trial a shared waiting-list system",
+   "author": "Riley Example",
+   "content": "<p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 0: an invented policy story for the test fixture.</p><p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 1: an invented policy story for the test fixture.</p><p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 2: an invented policy story for the test fixture.</p><p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 3: an invented policy story for the test fixture.</p><p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 4: an invented policy story for the test fixture.</p><p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 5: an invented policy story for the test fixture.</p><p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 6: an invented policy story for the test fixture.</p><p>Twelve hospitals in the fictional country of Brevia began pooling their waiting lists this week. Point 7: an invented policy story for the test fixture.</p>",
+   "url": "https://example.com/fictional-health-weekly/5",
+   "hours_ago": 8,
+   "_source": "Fictional Health Weekly",
+   "_section": "Health Policy"
+  },
+  {
+   "id": 6,
+   "feed_id": 6,
+   "title": "A small model that reads lab notebooks",
+   "author": "Casey Placeholder",
+   "content": "<p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 0: invented for the fixture; no such model exists.</p><p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 1: invented for the fixture; no such model exists.</p><p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 2: invented for the fixture; no such model exists.</p><p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 3: invented for the fixture; no such model exists.</p><p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 4: invented for the fixture; no such model exists.</p><p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 5: invented for the fixture; no such model exists.</p><p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 6: invented for the fixture; no such model exists.</p><p>A team at the made-up Orrin Labs released a small open model trained to summarise laboratory notebooks. Paragraph 7: invented for the fixture; no such model exists.</p>",
+   "url": "https://example.com/the-sample-machine/6",
+   "hours_ago": 4,
+   "_source": "The Sample Machine",
+   "_section": "AI & Engineering"
+  },
+  {
+   "id": 7,
+   "feed_id": 7,
+   "title": "Benchmarks are not the product",
+   "author": "Casey Placeholder",
+   "content": "<p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 0, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 1, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 2, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 3, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 4, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 5, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 6, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 7, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 8, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 9, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 10, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 11, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 12, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 13, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 14, made up for the fixture.</p><p>An invented opinion piece arguing that evaluation scores and useful products are different things. Argument 15, made up for the fixture.</p>",
+   "url": "https://example.com/the-sample-machine/7",
+   "hours_ago": 9,
+   "_source": "The Sample Machine",
+   "_section": "AI & Engineering"
+  },
+  {
+   "id": 8,
+   "feed_id": 8,
+   "title": "On patience in long-term investing",
+   "author": "Morgan Fictional",
+   "content": "<p>Long-read paragraph 1: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 2: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 3: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 4: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 5: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 6: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 7: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 8: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 9: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 10: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 11: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 12: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 13: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 14: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 15: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 16: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 17: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 18: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 19: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 20: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 21: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 22: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 23: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 24: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 25: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 26: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 27: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 28: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 29: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 30: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 31: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 32: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 33: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 34: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 35: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 36: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 37: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 38: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 39: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p><p>Long-read paragraph 40: this is invented filler text written for the test fixture, so the essay is long enough to count as a long read and to earn its own short summary when an editor model is switched on.</p>",
+   "url": "https://example.com/the-long-example/8",
+   "hours_ago": 10,
+   "_source": "The Long Example",
+   "_section": "Business"
+  },
+  {
+   "id": 9,
+   "feed_id": 9,
+   "title": "Briefly: a new port crane, a delayed bridge",
+   "author": "The Example Gazette",
+   "content": "<p>A short item that should become an Also today line rather than a piece.</p>",
+   "url": "https://example.com/the-example-gazette/9",
+   "hours_ago": 2,
+   "_source": "The Example Gazette",
+   "_section": "World"
+  },
+  {
+   "id": 10,
+   "feed_id": 10,
+   "title": "Verify your email address",
+   "author": "",
+   "content": "<p>Click the link to confirm your subscription.</p>",
+   "url": "https://example.com/the-example-ledger/10",
+   "hours_ago": 1,
+   "_source": "The Example Ledger",
+   "_section": "Business"
+  }
+ ]
+}

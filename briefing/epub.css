@@ -1,0 +1,39 @@
+/* The EPUB stylesheet, written for Kindle's converter (KF8): black and white, serif, left-aligned blocks with margins, no flex, grid,
+   floats, inline-block, absolute sizes, columns or widths, so the device's own settings (type size, columns) apply. */
+body{margin:0;padding:0;text-align:left}
+h1,h2,h3,h4,h5,h6{font-family:serif;text-align:left;page-break-after:avoid}
+h1{font-size:1.5em;line-height:1.2;font-weight:bold;margin:.4em 0 .15em;padding-bottom:.2em;border-bottom:.05em solid #000}
+h2{font-size:1.2em;line-height:1.25;margin:1em 0 .2em}
+h3{font-size:1.05em;margin:.9em 0 .3em}
+h4,h5,h6{font-size:1em;font-style:italic;margin:.9em 0 .3em}
+p{margin:0 0 .6em;text-align:left}
+li{text-align:left}
+img{max-width:100%;height:auto}
+figure{margin:.8em 0;text-align:center}
+figcaption{font-size:.85em;text-align:left}
+blockquote{margin:.8em 0 .8em 1em;padding-left:.6em;border-left:.1em solid #000}
+a{color:#000}
+
+/* The opening: a plain title with the edition and date on one small line, then the day in two minutes and the Contents. No cover. */
+h1.title{font-size:2em;line-height:1.1;font-weight:bold;border-bottom:0;margin:.6em 0 .1em;padding:0}
+.mastline{font-size:.8em;margin:0 0 1.2em}
+h2.front,h2.contents{font-size:1.2em;margin:1.2em 0 .4em;padding-bottom:.2em;border-bottom:.05em solid #000}
+
+/* A section heading: a heavy rule above, larger and bolder than any story title; the edition flows on without page breaks. */
+h2.section{font-size:1.7em;line-height:1.1;font-weight:bold;margin:2em 0 .1em;padding-top:.3em;border-top:.15em solid #000}
+h3.story{font-size:1.2em;line-height:1.25;margin:1.6em 0 .2em}
+
+/* Contents: one list, each section heading prominent with its stories under it. */
+.tsec{margin:.9em 0 .2em;font-size:1.05em;font-weight:bold}
+.ts{margin:0 0 .2em 1em;line-height:1.25}
+
+/* Lists: every item a block of label, bold linked headline and italic note. */
+.item{margin:0 0 1.1em;padding:0}
+.item p{margin:0 0 .15em}
+.src{font-size:.9em;margin:0 0 .1em}
+
+/* Story furniture: a small navigation line under each title and at each story's end. */
+.tnav{font-size:.8em;margin:0 0 .5em}
+.tnav.end{margin:1.2em 0 .4em;padding-top:.3em;border-top:.05em solid #000}
+.secm,.by{font-size:.85em;margin:0 0 .3em}
+.why,.tz{font-style:italic}

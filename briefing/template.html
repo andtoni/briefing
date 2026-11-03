@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scribe Briefing Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#d9d5cc; --desk-ink:#3d3a35; --desk-muted:#6f6a62;
+  --bezel:#1b1b1c; --bezel-edge:#2c2c2e;
+  --paper:#eceae3; --ink:#161616; --grey:#5c5a55; --hair:#9b988f;
+  --btn:#f4f2ec; --btn-border:#b9b4a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --desk:#1f1e1c; --desk-ink:#e2ded5; --desk-muted:#9a958b; --bezel:#0d0d0e; --bezel-edge:#29292b; --btn:#2c2b28; --btn-border:#4a4842; }
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--desk);color:var(--desk-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:12px 16px;overflow:hidden}
+.device{background:var(--bezel);border:1px solid var(--bezel-edge);border-radius:22px;padding:16px 16px 16px 58px;box-shadow:0 18px 40px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.04);position:relative;flex:none}
+.device[data-land="1"]{padding:16px 16px 58px 16px}
+.screen{background:var(--paper);color:var(--ink);width:var(--sw);height:var(--sh);position:relative;overflow:hidden;font-family:"Literata","Bookerly",Georgia,serif;font-size:var(--fs);line-height:1.46;cursor:pointer;-webkit-user-select:none;user-select:none}
+.head,.foot{position:absolute;left:var(--mx);right:var(--mx);font-family:system-ui,sans-serif;font-size:calc(var(--fs)*.62);color:var(--grey);display:flex;justify-content:space-between;white-space:nowrap}
+.head{top:calc(var(--my)*.36);justify-content:center}
+.head span{overflow:hidden;text-overflow:ellipsis}
+.foot{bottom:calc(var(--my)*.4);align-items:center}
+.foot span{flex:1}
+.foot #fr{text-align:right}
+#fc{color:var(--grey);text-decoration:none;border:1px solid var(--hair);border-radius:1em;padding:.18em .8em;line-height:1.3}
+.body h2 .up{float:right;font-family:system-ui,sans-serif;font-weight:400;font-size:.7em;color:var(--grey);border:0;padding-left:.6em}
+.view{position:absolute;left:var(--mx);top:var(--my);width:var(--pw);height:var(--ph);overflow:hidden}
+.flow{height:var(--ph);width:var(--pw);column-width:var(--cw);column-gap:var(--gap);column-fill:auto;will-change:transform}
+
+/* ---- the book itself: this is the part that maps to the EPUB stylesheet ---- */
+.toc{break-before:column}.today{break-before:auto}      /* one continuous flow: only the Contents starts a page */
+.flow a{color:inherit;text-decoration:none}
+.toch{font-size:1.5em;margin:0 0 .5em;font-weight:700;letter-spacing:-.01em}
+.tsec{display:flex;justify-content:space-between;align-items:baseline;font-size:1em;font-weight:800;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:.2em;margin:.8em 0 .15em;break-after:avoid}
+.titem{display:block;color:inherit;text-decoration:none;padding:.18em 0 .18em 1em;line-height:1.25;break-inside:avoid}
+.titem .tt{font-weight:600;font-size:.9em}
+.titem .tm{font-family:system-ui,sans-serif;font-size:.66em;color:var(--grey)}
+.tcount{font-family:system-ui,sans-serif;font-size:.6em;font-weight:400;color:var(--grey);letter-spacing:.04em}
+.sec{margin-top:2.2em;border-top:3px solid var(--ink);padding-top:.5em}.sech{font-size:2.5em;line-height:1.05;font-weight:800;letter-spacing:-.02em;margin:0 0 .15em}      /* a section heading: a heavy rule above, larger and bolder than any story title */
+.mast{margin:0 0 1.4em}.masth{font-size:2.4em;line-height:1.05;font-weight:700;letter-spacing:-.02em;margin:0}.mastline{font-family:system-ui,sans-serif;font-size:.66em;color:var(--grey);margin-top:.35em;letter-spacing:.04em}
+.secm{font-size:.82em;font-style:italic;color:var(--grey)}
+.secnav,.endnav{display:flex;flex-wrap:wrap;gap:.5em 1.4em;justify-content:space-between;font-family:system-ui,sans-serif;font-size:.64em;color:var(--grey);margin-top:1.4em;break-inside:avoid}
+.endnav{border-top:1px solid var(--hair);padding-top:.9em;margin-top:1em}
+.endnav .nx{flex-basis:100%;color:var(--ink);font-weight:600}
+.secnav a,.endnav a,.mini a,.titem,.tsec,.kicker{-webkit-tap-highlight-color:rgba(0,0,0,.15)}
+.mini{margin:0 0 1.3em;padding:.7em 0 .5em;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);break-inside:avoid}
+.minih{font-family:system-ui,sans-serif;font-size:.58em;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-bottom:.4em}
+.mini a{display:block;font-size:.8em;line-height:1.3;padding:.24em 0}
+.left{font-size:.74em;font-style:italic;color:var(--grey);margin-top:1.6em;line-height:1.4;text-indent:0}
+.kicker{display:block;font-family:system-ui,sans-serif;font-size:.6em;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:.6em}
+.kicker span{margin:0 .25em}
+article h1{font-size:1.62em;line-height:1.14;font-weight:700;letter-spacing:-.012em;margin:.4em 0 .45em;text-wrap:balance}
+.by{font-size:.78em;color:var(--grey)}
+.rule{width:2.4em;border-top:1.5px solid var(--ink);margin:1em 0 1.15em}
+.body p{margin:0;text-indent:1.35em;text-align:justify;hyphens:auto;-webkit-hyphens:auto;orphans:2;widows:2}
+.body>p:first-child,.body h2+p,.body h3+p,.body figure+p,.body hr+p,.body blockquote+p,.body ul+p,.body ol+p,.body p.lead{text-indent:0}
+.body p.lead::first-line{font-variant-caps:small-caps;letter-spacing:.03em}
+.body p.brief{text-indent:-1.05em;padding-left:1.05em;margin-bottom:.62em;text-align:left;hyphens:manual}
+.body p.brief::first-line{font-variant-caps:normal;letter-spacing:0}
+.body h2{font-size:1.14em;line-height:1.22;font-weight:700;margin:1.45em 0 .45em;break-after:avoid;text-wrap:balance}
+.body h3{font-size:.7em;font-family:system-ui,sans-serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:1.9em 0 .6em;break-after:avoid}
+.body blockquote{margin:.85em 0 .85em 0;padding-left:1em;border-left:2px solid var(--hair);font-size:.95em}
+.body blockquote p{text-indent:0;margin-bottom:.4em}
+.body ul,.body ol{margin:.7em 0;padding-left:1.3em}
+.body li{margin-bottom:.4em;text-align:left}
+.body li p{text-indent:0;text-align:left}
+.body figure{margin:.9em 0;break-inside:avoid;text-align:center}
+.body img{display:block;margin:0 auto;max-width:100%;max-height:calc(var(--ph)*.52);image-rendering:auto}
+.body figcaption{font-family:system-ui,sans-serif;font-size:.6em;color:var(--grey);margin-top:.5em;line-height:1.35}
+.body hr{border:0;text-align:center;margin:1.1em 0;height:1em}
+.body hr::before{content:"·  ·  ·";color:var(--grey);letter-spacing:.3em}
+.body a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--hair)}
+.body sup{font-size:.62em;line-height:0}
+.screen[data-cols="2"] .body img{max-height:calc(var(--ph)*.36)}
+.screen[data-cols="2"] article h1{font-size:1.4em}
+.screen[data-cols="2"] .sech{font-size:1.9em}
+.screen[data-cols="2"] .body p{text-indent:1.1em}
+.screen[data-cols="2"] .body p.lead,.screen[data-cols="2"] .body h2+p,.screen[data-cols="2"] .body figure+p{text-indent:0}
+.body p.src{font-family:system-ui,sans-serif;font-size:.6em;color:var(--grey);text-indent:0;margin:-.3em 0 .5em;letter-spacing:.04em}
+.body p.why{text-indent:0;font-style:italic;margin-bottom:.55em;text-align:left}.body p.tldr{text-indent:0;font-style:italic;text-align:left;hyphens:manual;margin-bottom:.9em}.body p.tldr .tl{font-style:normal;font-family:system-ui,sans-serif;font-size:.7em;letter-spacing:.04em;color:var(--grey)}.body p.tldr+p{text-indent:0}.screen[data-cols="2"] .body p.tldr+p{text-indent:0}
+.body .jd p{font-size:.86em;text-indent:0;margin-bottom:.45em;text-align:left;color:#33322f}
+.body .jd p.trunc{font-family:system-ui,sans-serif;font-size:.6em;color:var(--grey)}
+.body p.job{text-indent:0;text-align:left;margin-bottom:.75em;break-inside:avoid;line-height:1.3}
+.body p.job b{font-family:system-ui,sans-serif;font-size:.8em;margin-right:.35em}
+.body p.job span:not(.sc){display:block;font-size:.82em;line-height:1.36;color:#3a3936;margin-top:.15em}
+.screen .body p.job,.screen .body p.why,.screen .body p.src,.screen .body .jd p,.screen .body p.brief{text-indent:0}
+.screen .body p.brief{text-indent:-1.05em}
+.sc{font-family:system-ui,sans-serif;font-size:.78em;font-weight:700;color:#fff;border-radius:.28em;padding:.08em .42em;margin-right:.25em;white-space:nowrap}
+.sc.hi{background:#12733a}.sc.mid{background:#b86400}.sc.lo{background:#6b6862}
+.body h2 .sc{font-size:.72em;vertical-align:.12em}.body h2.xsub{font-family:system-ui,sans-serif;font-size:.78em;font-weight:600;letter-spacing:.03em;color:var(--grey);margin:1.6em 0 .6em}.body h2.xsub:first-child{margin-top:0}
+/* Repository sections: index and five cards on one page. The piece's own heading repeats the section's, so it is left out. */
+article.compact>.kicker,article.compact>h1,article.compact>.by,article.compact>.rule,article.compact>.end{display:none}
+.body .card{break-inside:avoid}
+.body .card+.card{margin-top:.95em}
+.body .card p.badge{margin:0 0 .2em;text-indent:0;line-height:1.1;font-size:.84em}
+.body .card h2{margin:0 0 .22em;line-height:1.22;font-size:.98em}
+.body .card h2 a{border-bottom:0}
+.body .card p.why{margin:0 0 .22em;line-height:1.34;font-size:.8em}
+.body .card p.src{margin:0;font-size:.56em}
+.sc.x{background:#111}
+/* List sections (repositories): one row per item, the coloured marker, the linked name, a one-line brief */
+.body p.job a{border-bottom:0;font-weight:600}.body p.job b.gain{font-family:system-ui,sans-serif;font-size:.66em;font-weight:400;color:var(--grey);margin-left:.4em}
+article.compact{break-before:auto;margin-top:1.2em}article.compact.sub>h1{display:block;font-size:1.05em;margin:.2em 0 .5em}
+.sc{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* Brief feeds: half a page each, two to a page; every row is two lines at most (name, brief), cut with an ellipsis */
+article.compact+.sec.brief{break-before:auto;margin-top:1.8em}.body p.job,.screen .body p.job span:not(.sc){white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* The Sunday digest: one plain paragraph per piece or market move */
+.screen .body p.post{margin:0 0 .25em;text-indent:0;font-size:.88em;line-height:1.36;text-align:left;hyphens:manual}
+.screen .body p.follow{margin:0 0 .5em;text-indent:0;text-align:left;font-size:.82em;line-height:1.4;hyphens:manual}.body p.follow a{border-bottom:0}
+.fgrp{font-family:system-ui,sans-serif;font-size:.6em;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--grey);border-bottom:1px solid var(--hair);padding-bottom:.2em;margin:1.3em 0 .5em;break-after:avoid}
+.fitem{margin:0 0 .62em;font-size:.95em;line-height:1.34;text-align:left;hyphens:manual;break-inside:avoid}.fitem a{font-weight:600}
+.fwhy{font-style:italic}.fsrc{font-family:system-ui,sans-serif;font-size:.62em;color:var(--grey);margin-left:.3em;white-space:nowrap}
+.end{text-align:center;font-size:.7em;margin-top:1.5em;color:var(--grey)}
+
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;flex:none}
+.controls button{font:inherit;font-size:13px;color:var(--desk-ink);background:var(--btn);border:1px solid var(--btn-border);border-radius:8px;padding:7px 12px;cursor:pointer}
+.controls button:hover{filter:brightness(1.06)}
+.controls button[aria-pressed="true"]{background:var(--desk-ink);color:var(--desk);border-color:var(--desk-ink)}
+.note{font-size:12px;color:var(--desk-muted);text-align:center;max-width:560px;line-height:1.45;flex:none}
+@media (max-height:640px){.note{display:none}}
+</style>
+</head>
+<body>
+<div class="device">
+  <div class="screen" id="screen">
+    <div class="head"><span id="head"></span></div>
+    <div class="view"><div class="flow" id="flow">%%BOOK%%</div></div>
+    <div class="foot"><span id="fl"></span><a id="fc" href="#toc" data-go="toc">☰ Contents</a><span id="fr"></span></div>
+  </div>
+</div>
+<div class="controls">
+  <button id="prev" aria-label="Previous page">‹ Back</button>
+  <button id="next" aria-label="Next page">Next ›</button>
+  <button id="toc-btn">Contents</button>
+  <button id="cols" aria-pressed="true">Two columns</button>
+  <button id="land" aria-pressed="false">Landscape</button>
+  <button id="smaller" aria-label="Smaller text">A−</button>
+  <button id="bigger" aria-label="Larger text">A+</button>
+</div>
+<div class="note">Built from everything in your feeds since Friday 9 October. Tap any title to jump to it; tap the right edge or press → to turn the page. Sized like a Kindle Scribe; typeface is Literata, standing in for Bookerly.</div>
+<script>
+(function(){
+  var root=document.documentElement, flow=document.getElementById('flow'), screen=document.getElementById('screen');
+  var page=0, pages=1, pw=0, g=48, cw=0, cols=2, land=false, scale=1, starts=[], wpp=200;
+  var SEL='.today,.toc,.sec,article';
+  function colOf(el){ return Math.round((el.getBoundingClientRect().left-flow.getBoundingClientRect().left)/(cw+g)); }
+  function pageOf(el){ return Math.floor(colOf(el)/cols); }
+  function layout(anchorEl){
+    var anchor=anchorEl||(currentChapter()||{}).el;
+    var asp=land?4/3:3/4;
+    var availH=window.innerHeight-(window.innerHeight>640?140:110)-(land?76:34), availW=window.innerWidth-32-(land?34:76);
+    var sh=Math.max(300,Math.min(availH,900)), sw=sh*asp;
+    if(sw>availW){sw=availW;sh=sw/asp;}
+    document.querySelector('.device').dataset.land=land?1:0;
+    sw=Math.round(sw); sh=Math.round(sh);
+    var shortSide=Math.min(sw,sh), mx=Math.round(shortSide*(cols===2?0.06:0.085)), my=Math.round(shortSide*0.075);
+    pw=sw-2*mx; var ph=sh-2*my;
+    g=cols===2?Math.round(pw*0.065):48; cw=cols===2?(pw-g)/2:pw;
+    var st=root.style;
+    st.setProperty('--sw',sw+'px'); st.setProperty('--sh',sh+'px'); st.setProperty('--mx',mx+'px'); st.setProperty('--my',my+'px');
+    st.setProperty('--pw',pw+'px'); st.setProperty('--ph',ph+'px'); st.setProperty('--cw',cw+'px'); st.setProperty('--gap',g+'px');
+    st.setProperty('--fs',(shortSide/30.5*scale*0.72).toFixed(2)+'px');
+    screen.dataset.cols=cols;
+    flow.style.transform='none';
+    pages=Math.max(1,Math.ceil(Math.round((flow.scrollWidth+g)/(cw+g))/cols));
+    starts=[].map.call(flow.querySelectorAll(SEL),function(el){ return {el:el,page:pageOf(el),title:el.dataset.title||''}; });
+    wpp=flow.textContent.split(/\s+/).length/pages;
+    go(anchor?pageOf(anchor):0);
+  }
+  function currentChapter(){ var c=starts[0]; for(var i=0;i<starts.length;i++){ if(starts[i].page<=page) c=starts[i]; } return c; }
+  function go(p){
+    page=Math.max(0,Math.min(pages-1,p));
+    flow.style.transform='translateX('+(-page*cols*(cw+g))+'px)';
+    var c=currentChapter(), idx=starts.indexOf(c), nextStart=idx<starts.length-1?starts[idx+1].page:pages;
+    var leftPages=nextStart-page-1, isArt=c&&c.el.tagName==='ARTICLE';
+    document.getElementById('head').textContent=c&&c.title?c.title:'';
+    document.getElementById('fl').textContent=isArt?(leftPages<1?'Last page in chapter':Math.max(1,Math.round((+c.el.dataset.mins||1)*leftPages/Math.max(1,nextStart-c.page)))+' min left in chapter'):'';
+    document.getElementById('fc').style.visibility=(c&&c.el.id==='toc')||page===0?'hidden':'visible';
+    document.getElementById('fr').textContent=Math.round(page/(Math.max(1,pages-1))*100)+'%';
+  }
+  function jump(id){ var el=document.getElementById(id); if(el) go(pageOf(el)); }
+  screen.addEventListener('click',function(e){
+    var a=e.target.closest('a');
+    if(a){ e.preventDefault(); if(a.dataset.go) jump(a.dataset.go); return; }
+    var r=screen.getBoundingClientRect();
+    go(page+((e.clientX-r.left)<r.width*0.3?-1:1));
+  });
+  var tx=null;
+  screen.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  screen.addEventListener('touchend',function(e){ if(tx===null)return; var dx=e.changedTouches[0].clientX-tx; tx=null; if(Math.abs(dx)>40){ e.preventDefault(); go(page+(dx<0?1:-1)); } });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(page+1);}
+    if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(page-1);}
+  });
+  document.getElementById('prev').onclick=function(){go(page-1)};
+  document.getElementById('next').onclick=function(){go(page+1)};
+  document.getElementById('toc-btn').onclick=function(){jump('toc')};
+  // The chosen text size is remembered in this browser, so later editions open at the same size.
+  try{var saved=parseFloat(localStorage.getItem('briefing-scale'));if(saved>=.6&&saved<=1.5)scale=saved}catch(e){}
+  function resize(d){scale=Math.min(1.5,Math.max(.6,Math.round((scale+d)*10)/10));try{localStorage.setItem('briefing-scale',scale)}catch(e){};layout()}
+  document.getElementById('smaller').onclick=function(){resize(-.1)};
+  document.getElementById('bigger').onclick=function(){resize(.1)};
+  document.getElementById('land').onclick=function(){land=!land;this.setAttribute('aria-pressed',land);layout()};
+  document.getElementById('cols').onclick=function(){cols=cols===2?1:2;this.setAttribute('aria-pressed',cols===2);layout()};
+  var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){layout()},120)});
+  window.addEventListener('load',function(){layout()});
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){layout()});
+  layout();
+  window.__kindle={go:go,jump:jump,cols:function(n){cols=n;layout()},land:function(v){land=v;layout()},scale:function(x){scale=x;layout()},info:function(){return {page:page,pages:pages,starts:starts.map(function(s){return [s.title,s.page]})}}};
+})();
+</script>
+</body>
+</html>

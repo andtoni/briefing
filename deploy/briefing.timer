@@ -1,0 +1,11 @@
+[Unit]
+Description=The Briefing, morning and midday
+
+[Timer]
+# Local time of the host. Set BRIEFING_TZ to the same zone so the editions are named Morning and Midday correctly.
+OnCalendar=*-*-* 05:00:00
+OnCalendar=*-*-* 13:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

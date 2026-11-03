@@ -1,0 +1,14 @@
+[Unit]
+Description=The Briefing: build the reading edition from Miniflux
+After=network-online.target
+
+[Service]
+Type=oneshot
+# Settings and credentials come from an environment file you keep outside the repository (see .env.example).
+EnvironmentFile=%h/.config/briefing/env
+WorkingDirectory=%h/briefing
+# `claude` (the editor), pandoc and chromium must be on PATH.
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=%h/briefing/.venv/bin/python %h/briefing/briefing/briefing.py
+# Worst case with retries: several model runs at 3 x 10 min each, plus the PDF, EPUB and Kindle send.
+TimeoutStartSec=10800
